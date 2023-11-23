@@ -17,9 +17,9 @@ export default async function Page() {
       <h1>Notes</h1>
       <div>
         {
-          items.map(({ id, content }) => {
+          items.map(({ id, content, additionalData }) => {
             return (<div key={id}>
-              <NoteCard id={id} content={content}/>
+              <NoteCard id={id} content={content} additionalData={additionalData} />
             </div>)
           })
         }

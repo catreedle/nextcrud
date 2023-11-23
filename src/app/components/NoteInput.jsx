@@ -38,6 +38,7 @@ export const NoteInput = () => {
             const data = await res.json();
             console.log('success', data);
             router.refresh()
+            setInputValue('')
             return data;
         } catch (error) {
             console.error('Error during fetch:', error);
